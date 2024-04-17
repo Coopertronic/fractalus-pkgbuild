@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=Fractalus
+Name=Rescue on Fractalus
 Comment=A fan remake of Rescue on Fractalus, a classic game developed by Lucasfilm Games originally released on Atari, Commodore 64 and other platforms in 1984.
 Exec=/opt/fractalus/Fractalus.x86_64
 Icon=org.fractalus.fractalus
