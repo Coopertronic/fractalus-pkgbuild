@@ -1,4 +1,5 @@
-# Maintainer: Marcin Nowak <marcin.j.nowak+aur AT gmail DOT com>
+# Maintainer: Matthew Phillip Cooper <coopertronics@gmail.com>
+# Ex-Maintainer: Marcin Nowak <marcin.j.nowak+aur AT gmail DOT com>
 
 pkgname=fractalus
 pkgver=1.1.0
@@ -13,7 +14,7 @@ depends=('bash' 'zlib')
 sha256sums=('9c87acfdf67c6367f8c22fbb7715cd6f21b317b8e0c6fff65f214b4e45d04599'
             '2b6ed647553bc49888b5ad87e37e461b6cdae71c5b43ee396b52d41466a9c77d'
             '0cd092338bff018f91ebaea19cf032ede20f3c03971b713dfbe1470243d4f668')
-license=("unknown")
+license=("GPL3")
 
 prepare() {
     mkdir "$srcdir"/Fractalus-Game
