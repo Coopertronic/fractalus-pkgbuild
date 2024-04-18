@@ -52,7 +52,8 @@ unpack_game_assets() {
 		echo "move path:"
 		echo "$workdir/$game-v1.1.0/$game.iso"
 		mv "$workdir/$game-v1.1.0/$game.iso" ./
-		if !(xorriso -osirrox on -indev "$game.iso" -extract / /opt); then
+		mkdir -p /opt/$game
+		if !(xorriso -osirrox on -indev "$game.iso" -extract / /opt/$game); then
 			something_wrong
 		else
 			rm "$gamepkg-v1.1.0.tar.lrz"
