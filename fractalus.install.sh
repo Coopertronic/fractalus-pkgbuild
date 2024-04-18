@@ -33,6 +33,10 @@ remove_game_assets() {
 unpack_game_assets() {
 	source ctos-functions
 
+##	This here needs to be changed because the 
+##	install will dump the game pack files into /usr/share/fractalus
+##	but needs to unpack and copy all the files over to opt/fractalus.
+
 	local instdir='/usr/share'
 	local vm='/usr/bin/scummvm'
 	local game='fractalus'
