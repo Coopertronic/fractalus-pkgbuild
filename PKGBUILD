@@ -12,8 +12,7 @@ depends=('bash' 'zlib' 'lrzip' 'xorriso' 'ctos-functions')
 source=("$gmpkgurl$pkgname/$pkgname-v$pkgver.zip"
     "$gmpkgurl$pkgname/$pkgname.sh"
     "$gmpkgurl$pkgname/org.$pkgname.$pkgname.svg"
-    "org.$pkgname.$pkgname.desktop"
-    "fractalus")
+    "$gmpkgurl$pkgname/org.$pkgname.$pkgname.desktop")
 arch=('x86_64')
 sha512sums=('92da92ca15739c26263786b225436f18576645a42cec5a95feb902a73697b62322f443c3f35c5a3a48493587294a11254c12a3a89e3354fe9ada810817c1e73d'
     'fa09e546ca7ecb2aa6d6c19f8a29ea2012b5f3fa591d59d217fbf08291cefd67cec5515d9dde4c96e568581cf43957d7176659ed72ed572672896b9ea0275738'
