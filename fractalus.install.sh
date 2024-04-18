@@ -26,7 +26,7 @@ pre_remove() {
 
 remove_game_assets() {
 	local game="fractalus"
-	rm -r /usr/share/$game/$game
+	rm -r /opt/$game
 	rm /usr/share/$game/$game.iso
 }
 
@@ -38,7 +38,7 @@ unpack_game_assets() {
 ##	but needs to unpack and copy all the files over to opt/fractalus.
 
 	local instdir='/usr/share'
-	local vm='/usr/bin/scummvm'
+	#local vm='/usr/bin/scummvm' # not needed
 	local game='fractalus'
 	local workdir="$instdir/$game"
 	local gamepkg="$workdir/$game"
@@ -46,18 +46,18 @@ unpack_game_assets() {
 	line_break '#'
 	cd "$workdir"
 	echo "Unpacking $lName ..."
-	if !( lrzuntar "$gamepkg-v1.tar.lrz" ); then
+	if !( lrzuntar "$gamepkg-v1.1.0.tar.lrz" ); then
 		something_wrong
 	else
 		echo "move path:"
-		echo "$workdir/$game-v1/$game.iso"
-		mv "$workdir/$game-v1/$game.iso" ./
-		if !(xorriso -osirrox on -indev "$game.iso" -extract / ./); then
+		echo "$workdir/$game-v1.1.0/$game.iso"
+		mv "$workdir/$game-v1.1.0/$game.iso" ./
+		if !(xorriso -osirrox on -indev "$game.iso" -extract / /opt); then
 			something_wrong
 		else
-			rm "$gamepkg-v1.tar.lrz"
+			rm "$gamepkg-v1.1.0.tar.lrz"
 			rm "$gamepkg.iso"
-			rm -r "$gamepkg-v1/"
+			rm -r "$gamepkg-v1.1.0/"
 		fi
 	fi
 }
